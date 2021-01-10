@@ -24,6 +24,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         collectionViewOne.dataSource = self
         collectionViewOne.delegate = self
+        
+        collectionViewTwo.dataSource = self
+        collectionViewTwo.delegate = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,12 +39,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as? Cell {
-            let imageName = arrayTemperature[indexPath.row]
-            cell.setTemperatureImage(tempName: imageName)
-            return cell
+        
+        if collectionView == collectionViewOne {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as? Cell {
+                let imageName = arrayTemperature[indexPath.row]
+                cell.setTemperatureImage(tempName: imageName)
+                return cell
+            }
+            return UICollectionViewCell()
+        } else {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTwo", for: indexPath) as? Cell {
+                let imageName = faces[indexPath.row]
+                cell.setFaceImage(faceName: imageName)
+                return cell
+            }
+            return UICollectionViewCell()
         }
-        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -74,7 +74,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellOne" id="nYS-9D-p66" customClass="Cell" customModule="MyImageCollectionView" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellTwo" id="nYS-9D-p66" customClass="Cell" customModule="MyImageCollectionView" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="1" width="128" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oAN-Q6-nJi">
@@ -97,7 +97,7 @@
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <connections>
-                                                    <outlet property="temperatureImage" destination="iG3-BR-G6H" id="7dd-jp-yTL"/>
+                                                    <outlet property="faceImage" destination="iG3-BR-G6H" id="5L5-pI-wUJ"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
