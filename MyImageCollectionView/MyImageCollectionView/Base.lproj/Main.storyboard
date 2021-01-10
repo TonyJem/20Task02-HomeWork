@@ -73,6 +73,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9J5-Bc-DfX" secondAttribute="trailing" constant="20" id="zqv-Xr-nj3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionViewOne" destination="gzC-hb-8fm" id="CkW-ie-dLy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
