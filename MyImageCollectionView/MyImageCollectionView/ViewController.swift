@@ -1,7 +1,7 @@
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
     @IBOutlet weak var collectionViewOne: UICollectionView!
     
     let arrayTemperature = ["temp.green",
@@ -13,5 +13,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionViewOne.dataSource = self
+        collectionViewOne.delegate = self
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayTemperature.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = UICollectionViewCell()
+        return cell
     }
 }
