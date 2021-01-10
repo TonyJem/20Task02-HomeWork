@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  MyImageCollectionView
-//
-//  Created by Office-iMac on 2021-01-10.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
