@@ -50,7 +50,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTwo", for: indexPath) as? Cell {
                 let imageName = faces[indexPath.row]
-                cell.setFaceImage(faceName: imageName)
+                cell.setSmileImage(faceName: imageName)
                 return cell
             }
             return UICollectionViewCell()

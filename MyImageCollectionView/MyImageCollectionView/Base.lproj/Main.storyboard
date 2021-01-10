@@ -97,7 +97,7 @@
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <connections>
-                                                    <outlet property="faceImage" destination="iG3-BR-G6H" id="5L5-pI-wUJ"/>
+                                                    <outlet property="smileImage" destination="iG3-BR-G6H" id="5L5-pI-wUJ"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
