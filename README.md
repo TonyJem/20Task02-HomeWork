@@ -7,7 +7,7 @@ Assignment for Modul #20 in iOS development cource by [SkilFactory](https://skil
 
 ##  Task description:
 
-<img src="/readMeImages/screen01.png" width="25%">
+<img src="/readMeImages/modul20intro.svg" width="25%">
 <br>
 Используя предыдущее задание в качестве «опоры», дополните его. Создайте аналогичную коллекцию под существующей и выведите в ней смайлики.
 
