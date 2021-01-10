@@ -42,15 +42,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if collectionView == collectionViewOne {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as? Cell {
-                let imageName = arrayTemperature[indexPath.row]
-                cell.setTemperatureImage(tempName: imageName)
+                let temperatureImage = arrayTemperature[indexPath.row]
+                cell.setTemperatureImage(tempName: temperatureImage)
                 return cell
             }
             return UICollectionViewCell()
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTwo", for: indexPath) as? Cell {
-                let imageName = arraySmiles[indexPath.row]
-                cell.setSmileImage(faceName: imageName)
+                let smileImage = arraySmiles[indexPath.row]
+                cell.setSmileImage(smileName: smileImage)
                 return cell
             }
             return UICollectionViewCell()
@@ -71,6 +71,5 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
         vc.setImageName(name: currentSelectedImage)
         present(vc, animated: true, completion: nil)
-        
     }
 }

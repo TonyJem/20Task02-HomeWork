@@ -9,7 +9,7 @@ class Cell: UICollectionViewCell {
         temperatureImage.image = UIImage(named: tempName)
     }
     
-    func setSmileImage(faceName: String) {
-        smileImage.image = UIImage(named: faceName)
+    func setSmileImage(smileName: String) {
+        smileImage.image = UIImage(named: smileName)
     }
 }
