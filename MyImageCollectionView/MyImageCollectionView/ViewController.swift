@@ -31,7 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ShowImageViC") as? ShowImageViewController else { return }
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ShowImageVC") as? ShowImageViewController else { return }
         var currentSelectedImage: String!
         currentSelectedImage = arrayTemperature[indexPath.row]
         vc.setImageName(name: currentSelectedImage)
