@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                             "temp.orange",
                             "temp.red"]
     
-    let faces = ["favorite",
+    let arraySmiles = ["favorite",
                  "nice",
                  "routine",
                  "notPleasant",
@@ -34,7 +34,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if collectionView == collectionViewOne {
             return arrayTemperature.count
         } else {
-            return faces.count
+            return arraySmiles.count
         }
     }
     
@@ -49,7 +49,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             return UICollectionViewCell()
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTwo", for: indexPath) as? Cell {
-                let imageName = faces[indexPath.row]
+                let imageName = arraySmiles[indexPath.row]
                 cell.setSmileImage(faceName: imageName)
                 return cell
             }
@@ -64,7 +64,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if collectionView == collectionViewOne {
             currentSelectedImage = arrayTemperature[indexPath.row]
         } else {
-            currentSelectedImage = faces[indexPath.row]
+            currentSelectedImage = arraySmiles[indexPath.row]
         }
         
         vc.setImageName(name: currentSelectedImage)
