@@ -11,6 +11,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                             "temp.orange",
                             "temp.red"]
     
+    let faces = ["favorite",
+                 "nice",
+                 "routine",
+                 "notPleasant",
+                 "bad",
+                 "hate"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.dataSource = self
