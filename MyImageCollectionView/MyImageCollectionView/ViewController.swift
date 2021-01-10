@@ -60,7 +60,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ShowImageVC") as? ShowImageViewController else { return }
         var currentSelectedImage: String!
-        currentSelectedImage = arrayTemperature[indexPath.row]
+        
+        if collectionView == collectionViewOne {
+            currentSelectedImage = arrayTemperature[indexPath.row]
+        } else {
+            currentSelectedImage = faces[indexPath.row]
+        }
+        
         vc.setImageName(name: currentSelectedImage)
         present(vc, animated: true, completion: nil)
         
