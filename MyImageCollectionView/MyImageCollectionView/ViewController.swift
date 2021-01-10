@@ -63,10 +63,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if collectionView == collectionViewOne {
             currentSelectedImage = arrayTemperature[indexPath.row]
-        } else {
-            currentSelectedImage = arraySmiles[indexPath.row]
         }
         
+        if collectionView == collectionViewTwo {
+            currentSelectedImage = arraySmiles[indexPath.row]
+        }
+
         vc.setImageName(name: currentSelectedImage)
         present(vc, animated: true, completion: nil)
         
