@@ -3,6 +3,8 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionViewOne: UICollectionView!
+    @IBOutlet weak var collectionViewTwo: UICollectionView!
+    
     
     let arrayTemperature = ["temp.green",
                             "temp.blackGreen",
@@ -25,7 +27,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayTemperature.count
+        
+        if collectionView == collectionViewOne {
+            return arrayTemperature.count
+        } else {
+            return faces.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
